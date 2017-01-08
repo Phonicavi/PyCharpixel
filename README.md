@@ -9,14 +9,14 @@
 
 ### Design
 
-+   `ascii_char.py`
++   `ascii_char.py`  
      **var** `ASCII_CHAR`: a list of 70 ASCII characters with decreasing gray scale values  
     **class** `Processor`  
     - constructor `__init__(_INPUT,_WIDTH,_HEIGHT)`: open an image file using `PIL.Image.open` and resize the image if needed  
     - staticmethod `get_char(r,g,b,alpha)`: a linear transformation used for mapping between gray scale values and characters  
     - method `generate_text()`: replace each pixel with proper character using `Processor.get_char`, join them and return the result text string  
 
-+ `charpixel.py`
++ `charpixel.py`  
     **var** `parser`: initialized with `argparse.ArgumentParser`  
     **var** `args`: parser's arguments with 4 members  
     - `INPUT` the path of input file, image, positional  
@@ -52,14 +52,14 @@ $ python charpixel.py test.jpeg -o result.txt
 
 ###  设计
 
-+   `ascii_char.py`
++   `ascii_char.py`  
      **var** `ASCII_CHAR`: 依据字符所占点阵的点数降序排列，得到了70个字符的list作为替换备选  
     **class** `Processor`  
     - 构造函数 `__init__(_INPUT,_WIDTH,_HEIGHT)`: 使用 `PIL.Image.open` 打开指定图片文件  
     - 静态方法 `get_char(r,g,b,alpha)`: 将RGB图片多通道值转换为单色灰度值，并对灰度值进行线性变换映射到备选字符list中  
     - 方法 `generate_text()`: 逐行逐列替换图片中每个像素，并拼接出完整字符串  
 
-+ `charpixel.py`
++ `charpixel.py`  
     **var** `parser`: 用 `argparse.ArgumentParser` 初始化一个parser实例  
     **var** `args`: 调用 `parser.parse_args()` 方法获得4个参数成员  
     - `INPUT` 输入图片的文件路径 必需参数  
